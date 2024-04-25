@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --mainbg-colors-first: #232323;
+    --mainbg-colors-second: #101010;
+    --main-invText-color: #222222;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(70deg, var(--mainbg-colors-first), var(--mainbg-colors-second));
+}
+html {
+    /* width: 1920px; */
+    color: white;
+    font-family: Montserrat;
+    padding: 10;
+    background: white;
+    /* vizual */
+}
+.MainBorderContainer {
+    padding: 30px 0px 0px;
+    /* border: 10px solid green; */
+    width: 100%;
+    height: 900px;
+}
+.header-mainContainer {
+    margin: 0 141px 141px;
+    /* border: 10px solid greenyellow; */
+    width: 1600px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+.home {
+    cursor: pointer;
+}
+.table {
+    cursor: pointer;
+}
+.news {
+    cursor: pointer;
+}
+.Buttons {
+    /* border: 10px solid greenyellow; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: fixed;
+    left: -100px;
+}
+.navbarObj {
+    margin: 10px;
+}
+.btnBack {
+    padding: 0;
+    width: 140px;
+    height: 60px;
+    border-radius: 50px;
+    background: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.invText {
+    color: var(--main-invText-color);
+    user-select: none;
+}
+.titleText {
+    z-index: 1001;
+    margin: 0 141px 141px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    height: 200px;
+    width: 900px;
+    /* border: 10px solid red;  */
+    display: flex;
+    align-items: end;
+    cursor: pointer; 
+} 
+.buttonTitle {
+    z-index: 1001;
+    margin: 0px 141px 141px;
+    padding: 0;
+    opacity: 0;
+    width: 260px;
+    height: 70px;
+    border-radius: 50px;
+    background: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;    
+}
+.titleContainer {
+    z-index: 1001;
+    height: 0;
+    width: 1600px;
+    /* border: 10px solid aqua; */
+}
+.anchorsTitle {
+    z-index: 999;   
+    position: absolute;
+    right: 12px;
+    top: 250px;
+    /* border: 10px solid salmon; */
+    height: auto;
+    width: 600px;
+}
+.decorationLine {
+    z-index: 999;
+    height: 0;
+    width: 300px;
+    border-radius: 10px;
+    border-left: 10px solid white;
+}
+.anchorsAtributes {
+    z-index: 999;
+    opacity: 0;
+    height: auto;
+    cursor: pointer;
+    margin-left: 30px;
+    user-select: none;
+}
+h1 {
+    font-weight: 400;
+}
+
+#titleText {
+    opacity: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* wave */
+section {
+    position: relative;
+    width: 100%;
+    height: 76.9vh;
+    overflow: hidden;
+}
+section .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(images/wave.png);
+    background-size: 1000px, 100px;
+}
+section .wave.wave1 {
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0;
+    bottom: 0;
+}
+section .wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;  
+}
+section .wave.wave3 {
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+section .wave.wave4 {
+    animation: animate2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+@keyframes animate {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+@keyframes animate2 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1000px;
+    }
+}
+.test {
+    height: 2000px;
+}
