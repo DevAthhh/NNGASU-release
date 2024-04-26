@@ -1,0 +1,46 @@
+html {
+    background: #333;
+}
+
+html {
+    background: var(--mainBgColor);
+}
+
+.nonamePage {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    height: 100px;
+    width: 70%;
+    background: var(--secondColor);
+    border-radius: 50px;
+}
+footer span {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: 10px;
+    color: var(--accentColor);
+}
+.footerContainer {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.social, .links {
+    margin: auto 20px auto 0;
+}
+.links * {
+    list-style: none;
+}
+
+.icoSocial:hover {
+    fill: var(--nngasuColorOr);
+    transition: all .2s;
+}

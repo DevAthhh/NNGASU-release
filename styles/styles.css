@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --mainBgColor: #24293b;
+    --secondColor: #393e50;
+    --accentColor: #fdfff5;
+    --nngasuColorOr: #ef6700;
+    --nngasuColorBl: #004588;
+}
+
+html {
+/* параметры */
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+    scroll-behavior: smooth;
+/* дизайн */
+    background: var(--mainBgColor);
+    color: var(--accentColor);
+}
+
+body, .bothPages {
+/* параметры */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+/* дизайн */
+}
+
+.noAnim * {
+    animation: none !important;
+    transition: none !important;
+}
