@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(black, green);
+    background: #f5efff;
 }
 
 /* ____________________NAVBAR */
@@ -137,6 +137,7 @@ html {
     width: 800px;
     border-radius: 20px;
     opacity: 0;
+    display: none;
 }
 
 #menu > ul {

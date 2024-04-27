@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(to right, #020024, #090979, #00d4ff);
+    background: #f5efff;
 }
 
 /* ____________________NAVBAR */
@@ -138,6 +138,7 @@ html {
         width: 800px;
         border-radius: 20px;
         opacity: 0;
+        display: none;
     }
     
     #menu a{
