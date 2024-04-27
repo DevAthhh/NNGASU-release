@@ -227,61 +227,77 @@ function menuAction(action) {
 };
 
 // NAVBAR
+let lastScrollPosition = window.scrollY;
+let scrollCount = 0;
+let isActive = false; // Переместим isActive снаружи обработчика событий
+
 const navbar = document.querySelector('#navbar');
 const social = document.querySelector('#social');
 const homeBtn = document.querySelector('#homeButton');
 
-document.addEventListener('DOMContentLoaded', function() {
-  let scrolledCount = 0;
-  const animDuration = 1000;
+function animationEnd() {
+  isActive = false; // Переключаем состояние активности
+  scrollCount = 0; // Сбрасываем счетчик
+  console.log('Animation ended, scrollCount:', scrollCount);
+}
 
-  window.addEventListener('wheel', (event) => {
-    scrolledCount += event.deltaY;
+window.addEventListener('scroll', () => {
+  const animDuration = 500;
+  console.log('Current scrollCount:', scrollCount);
 
-    if (scrolledCount > 170) {
-      menuAction('hidden');
-      anime({
-        targets: navbar,
-        duration: animDuration,
-        easing: 'easeOutExpo',
-        translateY: -70
-      });
+  // Вычисляем изменение прокрутки от последней позиции
+  const currentScrollPosition = window.scrollY;
+  const scrollDelta = currentScrollPosition - lastScrollPosition;
 
-      anime({
-        targets: social,
-        duration: animDuration,
-        easing: 'easeOutExpo',
-        right: -20,
-        top: 50,
-        backgroundColor: secondColorT
-      });
+  // Обновляем счетчик прокрутки пикселей и последнюю позицию
+  scrollCount += scrollDelta;
+  lastScrollPosition = currentScrollPosition;
 
-      anime({
-        targets: homeBtn,
-        duration: animDuration,
-        easing: 'easeOutExpo',
-        backgroundColor: secondColorT
-      });
-      scrolledCount = 0;
-    } else if (scrolledCount <= 0) {
-      menuAction('visible');
-        anime({
-          targets: navbar,
-          easing: 'spring(1, 80, 10, 0)',
-          translateY: 0,
-          duration: animDuration
-        });
-
-        anime({
-          targets: homeBtn,
-          duration: animDuration,
-          easing: 'easeOutExpo',
-          backgroundColor: secondColor
-        });
-        scrolledCount = 0;
-      };
-  });
+  // Проверка состояния активности и прокрутки
+  if (scrollCount >= 200 && !isActive) {
+    isActive = true; // Переключаем состояние активности
+    menuAction('hidden');
+    anime({
+      targets: navbar,
+      duration: animDuration,
+      easing: 'easeOutExpo',
+      translateY: -70,
+      complete: animationEnd // Передаем функцию без вызова
+    });
+    anime({
+      targets: social,
+      duration: animDuration,
+      easing: 'easeOutExpo',
+      right: -20,
+      top: 50,
+      backgroundColor: secondColorT
+    });
+    anime({
+      targets: homeBtn,
+      duration: animDuration,
+      easing: 'easeOutExpo',
+      backgroundColor: secondColorT
+    });
+  } else if (scrollCount <= -100 && !isActive) {
+    isActive = true; // Переключаем состояние активности
+    menuAction('visible');
+    anime({
+      targets: navbar,
+      easing: 'easeOutExpo',
+      translateY: 0,
+      duration: animDuration,
+      complete: animationEnd // Передаем функцию без вызова
+    });
+    anime({
+      targets: homeBtn,
+      duration: animDuration,
+      easing: 'easeOutExpo',
+      backgroundColor: secondColor
+    });
+  }
 });
+
+
 
 // MENU_BUTTON
 const line1 = document.querySelector('#line1');
@@ -290,11 +306,11 @@ const line3 = document.querySelector('#line3');
 const line4 = document.querySelector('#line4');
 const menuBtn = document.querySelector('#menuBtn');
 
-const animDuration = 200;
 const buttonsEasing = 'easeInOutQuad';
 let isMenuOpen = false;
 
 menuBtn.addEventListener('click', () => {
+const animDuration = 200;
   
   if (isMenuOpen == false) {
     isMenuOpen = null;

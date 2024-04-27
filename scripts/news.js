@@ -1,28 +1,29 @@
-var box1 = document.querySelector('.box1').style;
-var box2 = document.querySelector('.box2').style;
-var box3 = document.querySelector('.box3').style;
-var box4 = document.querySelector('.box4').style;
-
-async function select1(x) {
-    if (x == 0) {
-        box2.width = '70px';
-        box3.width = '70px';
-        box4.width = '70px';
-        box1.width = '1000px';
-    } else if(x == 1) {
-        box1.width = '70px';
-        box3.width = '70px';
-        box4.width = '70px';
-        box2.width = '1000px';
-    } else if (x == 2) {
-        box1.width = '70px';
-        box2.width = '70px';
-        box4.width = '70px';
-        box3.width = '1000px';
-    } else if (x == 3) {
-        box1.width = '70px';
-        box3.width = '70px';
-        box2.width = '70px';
-        box4.width = '1000px';
-    }
+// Сначала сохраняем ссылки на DOM-элементы, а не на их стили.
+var box1 = document.querySelector('.box1');
+var box2 = document.querySelector('.box2');
+var box3 = document.querySelector('.box3');
+var box4 = document.querySelector('.box4');
+box1.style.width = '1000px';
+function setWidthOfAllBoxes(width) {
+  // Установка одинаковой ширины для всех блоков
+  [box1, box2, box3, box4].forEach(box => {
+    box.style.width = width;
+  });
 }
+
+function select1(x) {
+  // Устанавливаем ширину всех блоков на '70px', только если выбранный блок не уже открыт
+  requestAnimationFrame(() => {
+    // Проверяем, не имеет ли уже выбранный блок ширину '1000px'
+    const selectedBox = [box1, box2, box3, box4][x];
+    if (selectedBox.style.width !== '1000px') {
+      setWidthOfAllBoxes('70px');
+    }
+
+    // Затем устанавливаем ширину выбранного блока на '1000px'
+    requestAnimationFrame(() => {
+      selectedBox.style.width = '1000px';
+    });
+  });
+}
+
