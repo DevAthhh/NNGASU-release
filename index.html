@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/style_boxes.css">
     <link id="styleLink" rel="stylesheet" href="#">
-    <title>NNGASU - Main</title>
+    <title>главная - ННГАСУ</title>
     <link rel="icon" href="images/nngasu.svg">
     <!-- import libraries -->
     <script src="libraries/anime.min.js"></script>
@@ -103,8 +103,19 @@
                 <div class="startTitle"><img src="images/troll.jpg" alt="" class="ims"></div>
                 <div class="newsBox">
                     <div class="titleText">
-                        <h1 class="titleT">Новости</h1>
-                        <svg class="newsDecoration" version="1.1" fill="#fdfff5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        <h1 class="titleT">новости</h1>
+                        <button class="btn"><h2>смотреть все</h2></button>
+                    </div>
+                    <!-- ################################################################## -->
+                <div class="boxes">
+                    <div class="box box1" onclick="select1(0)"></div>
+                    <div class="box box2" onclick="select1(1)"></div>
+                    <div class="box box3" onclick="select1(2)"></div>
+                    <div class="box box4" onclick="select1(3)"></div>
+                </div>
+                <div class="anons-header">
+                    <h1>анонсы</h1>
+                    <svg class="newsDecoration" version="1.1" fill="#fdfff5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                             <path class="st0" d="M228.23,118.76L228.23,118.76c2.04-2.12,5.41-2.19,7.53-0.16l92.86,89.09c2.12,2.04,2.19,5.41,0.16,7.53v0
                                 c-2.04,2.12-5.41,2.19-7.53,0.16l-92.86-89.09C226.26,124.25,226.19,120.88,228.23,118.76z"/>
@@ -146,12 +157,23 @@
                             <rect x="199" y="343" class="st0" width="21" height="13"/>
                             <rect x="208" y="353" class="st0" width="14" height="13"/>
                         </svg>
+                </div>
+                <div class="anons">
+                    <div class="aOne anons-box">
+                        <div class="abox-header"><h1>IT- чемпионат нефтяной отрасли ждет талантливых студентов</h1>
+                            <span>IT- чемпионат нефтяной отрасли пройдет под эгидой Международного инженерного чемпионата «CASE-IN» при поддержке президентской платформы «Россия - стра...</span>
+                        </div>
                     </div>
-                <div class="boxes">
-                    <div class="box box1" onclick="select1(0)"></div>
-                    <div class="box box2" onclick="select1(1)"></div>
-                    <div class="box box3" onclick="select1(2)"></div>
-                    <div class="box box4" onclick="select1(3)"></div>
+                    <div class="aTwo anons-box">
+                        <div class="abox-header">
+                            <h1>Открыт конкурс вопросов для Географического диктанта</h1>
+                            <span>Заявку на участие можно подать до 14 июня.</span>
+                        </div>
+                    </div>
+                    <div class="aThree anons-box">
+                        <h1>Новости библиотеки: доступ к удаленным ресурсам</h1>
+                        <span>Напоминаем читателям библиотеки об электронных ресурсах для учебы и научной деятельности</span>
+                    </div>
                 </div>
                 </div>
             </div>
