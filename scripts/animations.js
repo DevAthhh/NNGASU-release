@@ -178,7 +178,7 @@ homeButton.addEventListener('click', function() {
     });
 } else if (clicks >= 20 && isItUse == false) {
   isItUse = true;
-
+  document.getElementById('fifthNotification').style.display = 'flex';
   anime({
     targets: '#fifthNotification',
     easing: homeEasing,

@@ -48,7 +48,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     user-select: none;
@@ -139,26 +139,10 @@ html {
     opacity: 0;
     display: none;
 }
-
-#menu > ul {
-    list-style-type: none;
-    margin: 20px;
-    padding: 0;
+#menu span {
+    align-self: end;
 }
-
-#menu ul li {
-    list-style-type: none;
-}
-
-#menu ul li ul {
-    padding-bottom: 20px;
-}
-
-#menu ul li ul li{
-    margin: 5px;
-}
-
-#menu a{
+#menu a {
     color: var(--accentColor);
     text-decoration: none;
 }
