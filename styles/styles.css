@@ -22,7 +22,7 @@ html {
     color: var(--accentColor);
 }
 
-body, .bothPages {
+body {
 /* параметры */
     display: flex;
     flex-direction: column;

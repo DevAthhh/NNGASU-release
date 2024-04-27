@@ -1,5 +1,5 @@
-var firstQ = document.getElementById('firstQ');
-var secondQ = document.getElementById('secondQ');
+const firstQ = document.getElementById('firstQ');
+const secondQ = document.getElementById('secondQ');
 
 function getSecondQ () {
     firstQ.style.display = 'none';

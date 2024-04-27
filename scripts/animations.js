@@ -297,8 +297,6 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
-
 // MENU_BUTTON
 const line1 = document.querySelector('#line1');
 const line2 = document.querySelector('#line2');

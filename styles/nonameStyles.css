@@ -1,8 +1,4 @@
 html {
-    background: #333;
-}
-
-html {
     background: var(--mainBgColor);
 }
 
@@ -20,7 +16,7 @@ footer {
     background: var(--secondColor);
     border-radius: 50px;
 }
-.copyright {
+.footerCopyright {
     background: var(--secondColor);
     border-radius: 0 0 10px 10px;
     padding: 0 5px 2px 5px;
@@ -35,14 +31,13 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-.social, .links {
+.footerSocial, .footerLinks {
     margin: auto 20px auto 0;
 }
-.links * {
+.footerLinks * {
     list-style: none;
 }
-
-.icoSocial:hover {
+.footerIcoSocial:hover {
     fill: var(--nngasuColorOr);
-    transition: all .2s;
+    transition: all .3s;
 }

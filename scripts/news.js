@@ -12,18 +12,14 @@ function setWidthOfAllBoxes(width) {
 }
 
 function select1(x) {
-  // Устанавливаем ширину всех блоков на '70px', только если выбранный блок не уже открыт
   requestAnimationFrame(() => {
-    // Проверяем, не имеет ли уже выбранный блок ширину '1000px'
     const selectedBox = [box1, box2, box3, box4][x];
     if (selectedBox.style.width !== '1000px') {
       setWidthOfAllBoxes('70px');
     }
 
-    // Затем устанавливаем ширину выбранного блока на '1000px'
     requestAnimationFrame(() => {
       selectedBox.style.width = '1000px';
     });
   });
 }
-
