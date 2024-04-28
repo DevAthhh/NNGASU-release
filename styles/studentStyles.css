@@ -1,27 +1,31 @@
-html {
-    background: #f5efff;
+header {
+    z-index: 1;
 }
-
+.bothPages {
+    display: flex;
+    flex-direction: column;
+}
 /* ____________________NAVBAR */
 .island {
     /* параметры */
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    /* визуал */
-    /* анимация */
-        position: fixed;
-        top: -65px;
-    }
-    
-.pushNotifications {
-    /* параметры */
+    display: flex;
+    justify-content: center;
     width: 100%;
     /* визуал */
     /* анимация */
+    position: fixed;
+    top: -65px;
+}
+    
+.pushNotifications {
+/* параметры */
+    width: 100%;
+/* визуал */
+/* анимация */
     position: absolute;
     top: 0;
-    left: 10px;}
+    left: 10px;
+}
     
 #firstNotification, #secondNotification, #thirdNotification, #fourthNotification {
     /* параметры */
@@ -147,7 +151,6 @@ html {
     text-decoration: none;
 }
 /* ____________________NAVBARBUTTONS */
-
 .navbarButtonsContainer {
     /* параметры */
     height: 100%;
@@ -160,6 +163,11 @@ html {
 .navbarButton {
     color: var(--accentColor);
     text-decoration: none;
+    font-weight: 500;
+    transition: all .1s;
+}
+.navbarButton:hover {
+    color: var(--nngasuColorOr);
 }
     
 .rightButtons {
@@ -179,6 +187,10 @@ svg {
 #menuBtn, #line1, #line2, #line3 {
     stroke: var(--accentColor);
     cursor: pointer;
+    transition: stroke .1s;
+}
+#menuBtn:hover * {
+    stroke: var(--nngasuColorOr);
 }
 
 .icoSocial, .rutubeRed, .rutubeBlack, .dzenStar {
@@ -219,12 +231,41 @@ svg {
 .dzen:hover .dzenStar{
     opacity: 100;
 }
-    
-.menuBtn {
-/* параметры */
+
+/* FOOTER */
+footer {
     display: flex;
-    align-items: center;
-/* визуал */
+    flex-direction: column;
+    align-self: center;
+    height: 100px;
+    width: 70%;
+    background: var(--secondColor);
+    border-radius: 50px;
+}
+.footerCopyright {
+    background: var(--secondColor);
+    border-radius: 0 0 10px 10px;
+    padding: 0 5px 2px 5px;
+    margin-bottom: 10px;
+    color: var(--accentColor);
+    align-self: center;
+}
+.footerContainer {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.footerSocial, .footerLinks {
+    margin: auto 20px auto 0;
+}
+.footerLinks * {
+    list-style: none;
+}
+.footerIcoSocial:hover {
+    fill: var(--nngasuColorOr);
+    transition: all .3s;
 }
 
 /* MEDIA */
