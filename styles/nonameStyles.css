@@ -32,7 +32,10 @@ footer {
     justify-content: space-between;
 }
 .footerSocial, .footerLinks {
-    margin: auto 20px auto 0;
+    margin: auto 0 auto 0;
+}
+.footerSocial {
+    margin-right: 20px;
 }
 .footerLinks * {
     list-style: none;

@@ -1,6 +1,6 @@
-var styleLink = document.querySelector('#styleLink');
-var role = localStorage.getItem('role');
-var where = localStorage.getItem('where');
+const styleLink = document.querySelector('#styleLink');
+const role = localStorage.getItem('role');
+const where = localStorage.getItem('where');
 
 showPage(role, where);
 

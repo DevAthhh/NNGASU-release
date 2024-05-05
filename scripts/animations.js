@@ -225,6 +225,19 @@ function menuAction(action) {
     });
   }
 };
+function fullMenu(action) {
+  const fullMenu = document.getElementById('fullMenu');
+  const bothPages = document.getElementById('bothPages');
+  if(action == 'show') {
+    fullMenu.style.visibility = 'visible';
+    fullMenu.style.opacity = '1';
+    bothPages.style.overflow = 'hidden';
+  } else {
+    fullMenu.style.opacity = '0';
+    fullMenu.style.visibility = 'hidden';
+    bothPages.style.overflow = 'auto';
+  }
+}
 
 // NAVBAR
 let lastScrollPosition = window.scrollY;
@@ -238,12 +251,10 @@ const homeBtn = document.querySelector('#homeButton');
 function animationEnd() {
   isActive = false; // Переключаем состояние активности
   scrollCount = 0; // Сбрасываем счетчик
-  console.log('Animation ended, scrollCount:', scrollCount);
 }
 
 window.addEventListener('scroll', () => {
   const animDuration = 500;
-  console.log('Current scrollCount:', scrollCount);
 
   // Вычисляем изменение прокрутки от последней позиции
   const currentScrollPosition = window.scrollY;

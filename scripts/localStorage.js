@@ -2,14 +2,14 @@ function setRole(value) {
     localStorage.setItem('role', value);
     if (value == 'noname') {
         showPage('noname');
+        howToReset('show');
     }
-    console.log(value);
     return;
 }
 
 function setWhere(value) {
     localStorage.setItem('where', value);
     showPage(localStorage.getItem('role'), value);
-    console.log(value);
+    howToReset('show');
     return;
 }

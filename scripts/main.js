@@ -1,8 +1,12 @@
+function resetAll() {
+    localStorage.clear();
+    getFirstQ();
+    showPage();
+}
+
 document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
-        localStorage.clear();
-        getFirstQ();
-        showPage();
+        resetAll();
     }
 });
 
@@ -16,3 +20,13 @@ if (isMenuOpen == false) {
     menuAction('off');  
 }
 });
+
+function howToReset(action) {
+    if(action == 'show' && localStorage.getItem('howToReset') != 'true') {
+        document.getElementById('howToReset').style.display = 'flex';
+    } else if(action == 'hide') {
+        document.getElementById('howToReset').style.display = 'none';
+        localStorage.setItem('howToReset', 'true');
+        saveLastVisit();
+    }
+}

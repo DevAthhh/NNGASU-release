@@ -1,8 +1,7 @@
 .startTitle {
-    width: 100%;
     height: 100vh;
+    width: 100%;
     background: #000;
-    box-shadow: 0 -100px 10px black;
 }
 .newsBox {
     background: white;
