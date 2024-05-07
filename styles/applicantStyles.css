@@ -92,7 +92,7 @@ header {
 }
 
 .homeButton:hover {
-    background: #ef6700;
+    background: var(--nngasuColorOr);
     fill: white;
 }
     
@@ -143,12 +143,26 @@ header {
     opacity: 0;
     display: none;
 }
-#menu span {
+#menu button {
     align-self: end;
 }
 #menu a {
     color: var(--accentColor);
     text-decoration: none;
+}
+#fullMenu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: var(--secondColor);
+    z-index: 2;
+    opacity: 0;
+    transition: all 1s;
 }
 /* ____________________NAVBARBUTTONS */
 .navbarButtonsContainer {
@@ -258,7 +272,10 @@ footer {
     justify-content: space-between;
 }
 .footerSocial, .footerLinks {
-    margin: auto 20px auto 0;
+    margin: auto 0 auto 0;
+}
+.footerSocial {
+    margin-right: 20px;
 }
 .footerLinks * {
     list-style: none;
@@ -267,6 +284,7 @@ footer {
     fill: var(--nngasuColorOr);
     transition: all .3s;
 }
+
 
 /* MEDIA */
 @media (max-width: 1919px) {
