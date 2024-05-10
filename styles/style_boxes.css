@@ -1,8 +1,3 @@
-.startTitle {
-    height: 100vh;
-    width: 100%;
-    background: #000;
-}
 .newsBox {
     background: white;
     width: 100%;
@@ -18,6 +13,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    border: 5px solid red;
 }
 .titleText {
     margin-top: 35px;
