@@ -296,14 +296,19 @@
         </header>
         <main>
             <div class="firstScreen">
-                <div class="titleNNGASU"><span>ННГАСУ</span></div>                
+                <div class="titleNNGASU"><span>ННГАСУ</span></div>  
+                <div class="navigation">
+                    <a href="#newsBox">новости</a>
+                    <a href="#anons">анонсы</a>
+                    <a onclick="showPage('noname')">описание</a>
+                </div>              
                 <div class="slideShow">
-                    <img class="slide" src="images/1.jpg">
-                    <img class="slide" src="images/2.jpg">
-                    <img class="slide" src="images/3.jpg">
+                    <img class="slide" src="images/1.png">
+                    <img class="slide" src="images/2.png">
+                    <img class="slide" src="images/3.png">
                 </div>
             </div>
-            <div class="newsBox">
+            <div class="newsBox" id="newsBox">
                 <div class="titleText">
                     <h1 class="titleT">новости</h1>
                     <button class="btn"><h2>смотреть все</h2></button>
@@ -314,7 +319,7 @@
                     <div class="box box3" onclick="select1(2)"></div>
                     <div class="box box4" onclick="select1(3)"></div>
                 </div>
-                <div class="anons-header">
+                <div class="anons-header" id="anons">
                     <h1>анонсы</h1>
                     <svg class="newsDecoration" version="1.1" fill="#fdfff5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                         <path class="st0" d="M228.23,118.76L228.23,118.76c2.04-2.12,5.41-2.19,7.53-0.16l92.86,89.09c2.12,2.04,2.19,5.41,0.16,7.53v0c-2.04,2.12-5.41,2.19-7.53,0.16l-92.86-89.09C226.26,124.25,226.19,120.88,228.23,118.76z"/>

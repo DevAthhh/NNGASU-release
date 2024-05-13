@@ -202,17 +202,47 @@ main {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 .titleNNGASU {
     font-size: 100px;
     font-weight: 800;
+    margin: auto;
 }
 .titleNNGASU span {
+    display: flex;
+    background: #ffffff52;
+    border-radius: 40px;
+    color: #00000052;
+    padding: 0 30px 0 30px;
+    cursor: pointer;
+    user-select: none;
+    transition: all .3s;
+}
+.titleNNGASU span:hover {
+    background: #ffffff88;
+    color: var(--nngasuColorOr);
+}
+.titleNNGASU span:active {
+    transform: scale(0.95);
+}
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.navigation a {
     color: #ffffff33;
-    text-shadow: 0 0 20px #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+.navigation a:hover {
+    color: #ffffff;
 }
 .slideShow {
     position: absolute;
@@ -223,9 +253,13 @@ main {
     height: 100vh;
 }
 .slideShow img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     filter: blur(3px);
+    transition: all .5s;
 }
 .slideShow::after {
     content: '';

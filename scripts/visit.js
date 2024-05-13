@@ -7,9 +7,8 @@ function timeDiffenece(pastDate, currentDate) {
     currentDate = currentDate ? new Date(currentDate) : new Date();
     const diffMilliseconds = currentDate - pastDate;
 
-    const seconds = Math.round(diffMilliseconds / 1000);
+    // const seconds = Math.round(diffMilliseconds / 1000);
     const days = Math.round(diffMilliseconds / (1000 * 60 * 60 * 24));
-    console.log(days);
     return days;
 }
 function dateChecker() {

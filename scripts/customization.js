@@ -33,5 +33,6 @@ function showPage(role, where) {
   setDisplay('.university', where == 'university' ? 'flex' : 'none');
 
   styleLink.href = roleStyles[role] || roleStyles['default'];
+
   setTimeout(removeLoadingMask, 50);
 }
