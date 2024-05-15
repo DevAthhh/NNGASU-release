@@ -227,15 +227,12 @@ function menuAction(action) {
 };
 function fullMenu(action) {
   const fullMenu = document.getElementById('fullMenu');
-  const bothPages = document.getElementById('bothPages');
   if(action == 'show') {
     fullMenu.style.visibility = 'visible';
     fullMenu.style.opacity = '1';
-    bothPages.style.overflow = 'hidden';
   } else {
     fullMenu.style.opacity = '0';
     fullMenu.style.visibility = 'hidden';
-    bothPages.style.overflow = 'auto';
   }
 }
 
@@ -318,7 +315,7 @@ const menuBtn = document.querySelector('#menuBtn');
 const buttonsEasing = 'easeInOutQuad';
 let isMenuOpen = false;
 
-menuBtn.addEventListener('click', () => {
+menuBtn.addEventListener('click', function menuBtnAnim() {
 const animDuration = 200;
   
   if (isMenuOpen == false) {
